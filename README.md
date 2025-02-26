@@ -1,4 +1,11 @@
+Revisão de estudos baseados nas aulas do Bonieky Lacerda
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+## Install React Icons
+
+npm install react-icons
+
 
 ## Getting Started
 

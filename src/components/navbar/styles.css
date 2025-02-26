@@ -1,0 +1,62 @@
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #111;
+  color: white;
+  position: relative;
+}
+
+/* Ícone do menu hambúrguer (Mobile) */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 28px;
+  color: white;
+}
+
+/* Menu Mobile */
+.mobileMenu {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #222;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.mobileMenu a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Menu Desktop */
+.desktopMenu {
+  display: flex;
+}
+
+.desktopMenu a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 18px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .desktopMenu {
+    display: none;
+  }
+}
