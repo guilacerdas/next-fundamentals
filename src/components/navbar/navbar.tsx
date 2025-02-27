@@ -39,7 +39,7 @@ export default function Navbar() {
                 <Link href="/outros-conceitos/scripts-externos">
                   Scripts Externos
                 </Link>
-                <Link href="/outros-conceitos/use-routing">useRouter</Link>
+                <Link href="/outros-conceitos/use-router">useRouter</Link>
                 <Link href="/outros-conceitos/link-component">
                   Componente &lt;Link /&gt;
                 </Link>
@@ -76,7 +76,7 @@ export default function Navbar() {
               <Link href="/outros-conceitos/scripts-externos">
                 Scripts Externos
               </Link>
-              <Link href="/outros-conceitos/use-routing">useRouter</Link>
+              <Link href="/outros-conceitos/use-router">useRouter</Link>
               <Link href="/outros-conceitos/link-component">
                 Componente &lt;Link /&gt;
               </Link>
