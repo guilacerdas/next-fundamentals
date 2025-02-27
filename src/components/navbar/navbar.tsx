@@ -18,6 +18,7 @@ export default function Navbar() {
         <div className="mobileMenu">
           <a href="/">Página Inicial</a>
           <a href="/navegando">Navegando entre Páginas</a>
+          <a href="/renderizacao">Renderização no Next.js</a>
         </div>
       )}
 
@@ -25,6 +26,7 @@ export default function Navbar() {
       <div className="desktopMenu">
         <a href="/">Página Inicial</a>
         <a href="/navegando">Navegando entre Páginas</a>
+        <a href="/renderizacao">Renderização no Next.js</a>
       </div>
     </nav>
   );
