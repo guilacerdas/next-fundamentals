@@ -1,10 +1,12 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 import { FiMenu, FiX } from "react-icons/fi"; // Ícones do react-icons
-import "./styles.css"; // Importação do novo arquivo de estilos
+import "./styles.css"; // Importação do CSS separado
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [submenuOpen, setSubmenuOpen] = useState(false);
 
   return (
     <nav className="navbar">
@@ -16,17 +18,71 @@ export default function Navbar() {
       {/* Menu Mobile */}
       {isOpen && (
         <div className="mobileMenu">
-          <a href="/">Página Inicial</a>
-          <a href="/navegando">Navegando entre Páginas</a>
-          <a href="/renderizacao">Renderização no Next.js</a>
+          <Link href="/">Home</Link>
+          <Link href="/navegando">Navegando entre Páginas</Link>
+          <Link href="/renderizacao">Renderização</Link>
+          <div className="submenu">
+            <button
+              className="submenu-btn"
+              onClick={() => setSubmenuOpen(!submenuOpen)}
+            >
+              Outros Conceitos
+            </button>
+            {submenuOpen && (
+              <div className="submenu-content">
+                <Link href="/outros-conceitos/fast-refreshing">
+                  Fast Refreshing
+                </Link>
+                <Link href="/outros-conceitos/variaveis-ambiente">
+                  Variáveis de Ambiente
+                </Link>
+                <Link href="/outros-conceitos/scripts-externos">
+                  Scripts Externos
+                </Link>
+                <Link href="/outros-conceitos/use-routing">useRouter</Link>
+                <Link href="/outros-conceitos/link-component">
+                  Componente &lt;Link /&gt;
+                </Link>
+              </div>
+            )}
+          </div>
         </div>
       )}
 
       {/* Menu Desktop */}
       <div className="desktopMenu">
-        <a href="/">Página Inicial</a>
-        <a href="/navegando">Navegando entre Páginas</a>
-        <a href="/renderizacao">Renderização no Next.js</a>
+        <Link href="/">Home</Link>
+        <Link href="/navegando">Navegando entre Páginas</Link>
+        <Link href="/renderizacao">Renderização</Link>
+        <div className="submenu">
+          <button
+            className="submenu-btn"
+            onClick={() => setSubmenuOpen(!submenuOpen)}
+          >
+            Outros Conceitos
+          </button>
+          {submenuOpen && (
+            <div
+              className="submenu-content"
+              onClick={() => setSubmenuOpen(!submenuOpen)}
+              onMouseLeave={() => setSubmenuOpen(!submenuOpen)}
+            >
+              <Link href="/outros-conceitos/fast-refreshing">
+                Fast Refreshing
+              </Link>
+              <Link href="/outros-conceitos/variaveis-ambiente">
+                Variáveis de Ambiente
+              </Link>
+              <Link href="/outros-conceitos/scripts-externos">
+                Scripts Externos
+              </Link>
+              <Link href="/outros-conceitos/use-routing">useRouter</Link>
+              <Link href="/outros-conceitos/link-component">
+                Componente &lt;Link /&gt;
+              </Link>
+            </div>
+          )}
+        </div>
       </div>
     </nav>
   );
